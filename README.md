@@ -1,5 +1,5 @@
 <html>
-    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+    <meta charset="utf-8">
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="Web-1.html">XHKU</a>
@@ -53,3 +53,4 @@
           <div class="row">
             <div class="col-12">
               <p class="text-align:center"><p>微设工作室 © 版权所有   -XHKU</p>
+</html>
