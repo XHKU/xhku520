@@ -8,7 +8,7 @@
       </div>
       <hr>
       <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-12 col-sm-12">
           <div class="media">
             <img src="XHKU-4.png" alt="Generic placeholder image" width="200" height="205" class="mr-3">
             <div class="media-body">
