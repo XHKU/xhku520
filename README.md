@@ -8,19 +8,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="Web-1.html">主页 <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Web-2.html">关于我</a>
-          </li>
-        </ul>
       </div>
     </nav>
     <div class="container">
       <hr>
       <div class="row">
-	  <a href="https://www.xhku.xyz/Web-1"><img src="XHKU-logo.png" alt="" width="300" height="35"/></a>
+	  <a href="https://www.xhku.xyz/Web-1"><img img border="0" src="XHKU-logo.png" alt="" width="300" height="35">
+	  </a>
       </div>
       <hr>
       <div class="row">
@@ -29,7 +23,7 @@
             <img src="XHKU-4.png" alt="Generic placeholder image" width="200" height="205" class="mr-3">
             <div class="media-body">
               <h5 class="mt-0">XHKU</h5>
-				大家好，我是XHKU
+		大家好，我是XHKU
             </div>
           </div>
         </div>
