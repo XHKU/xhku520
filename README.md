@@ -1,14 +1,4 @@
-<html lang="en">
-  <head>
-	  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="HandheldFriendly" content="true">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- 名称 -->  
-    <title>XHKU-主页</title>
-    <!-- Bootstrap -->
+<html>
     <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
   </head>
   <body>
