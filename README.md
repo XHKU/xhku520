@@ -52,8 +52,7 @@
           <div class="row justify-content-md-around m-1">
             <address>
               <h5>我的联系方式: </h5>
-                  <a href="http://wpa.qq.com/msgrd?V=0&amp;Uin=404068203&amp;Site=http://hexun.com/et27/default.html&amp;Menu=yes"><p>QQ: 2277103066</p>
-                  </a>
+		    <p>QQ: 2277103066</p>
               <a href="mailto:k_xiaohao@126.com">邮箱：k_xiaohao@126.com</a>
             </address>
           </div>
@@ -73,9 +72,6 @@
       <footer class="text-center">
         <div class="container">
           <div class="row">
-			  <div class="col-12">
-          <p class="text-align:center">友情链接：<strike><a href=""> 宦官 </a></strike> / <a href=""> 微设工作室</a></p>
-        </div>
             <div class="col-12">
               <p class="text-align:center"><p>微设工作室 © 版权所有   -XHKU</p>
             </div>
@@ -83,10 +79,5 @@
         </div>
       </footer>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-4.0.0.js"></script>
   </body>
 </html>
