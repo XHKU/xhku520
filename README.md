@@ -10,15 +10,6 @@
     <title>XHKU-主页</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6861d2e5a747fcc999d42d8467349c9a";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
   </head>
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
