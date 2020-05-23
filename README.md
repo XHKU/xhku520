@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
 	  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -79,82 +78,6 @@ var _hmt = _hmt || [];
           </div>
         </div>
       </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-6 col-sm-12">
-          <h2>简介</h2>
-          <hr>
-<h5><span class="badge badge-secondary">编程</span></h5>
-          <p>本人从2017年接触编程，2018年开始正式学习编程，会C、C++、HTML、CSS。2020年开始尝试制作第一款游戏</p>
-<h5><span class="badge badge-secondary">绘画</span></h5>
-          <p>从小就对绘画感兴趣的我，2015时学过两年绘画，后来就再也没学过绘画了(这里再次强调一下，我只是对画画感兴趣，但真的不会画画)</p>
-<h5><span class="badge badge-secondary">摄影</span></h5>
-          <p>2019年初开始对摄影感兴趣，年中时入手了第一台相机"尼康D3200",摄影也就逐渐成为了我的一种爱好</p>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <h2>技能</h2>
-          <hr>
-         <div class="progress mt-4">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 85%"> Photoshop</div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"> HTML</div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"> Premiere Pro</div>
-          </div>
-		  <div class="progress mt-4">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%"> 摄影</div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 64%"> C++</div>
-          </div>
-		  <div class="progress mt-4">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"> 绘画</div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%"> Unity</div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> C4d</div>
-          </div>
-          <div class="progress mt-4">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%"> JAVA</div>
-          </div>
-        </div>
-      </div>
-      <hr>
-<hr>
-<hr>
-      <h2>2020-2020所有绘画作品</h2>
-      <hr>
-      <div class="container">
-        <div class="row text-center">
-		  <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/成稿/战疫情.jpg" alt=""><p>2020.2.17绘画</p></div>
-          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/成稿/3-成稿.jpg" alt=""><p>2020.3.21绘画</p></div>
-		  
-          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/成稿/5-成稿.jpg" alt=""><p>2020.5.4绘画</p></div>
-		  <div class="col-12">
-		    <p class="text-align:center"><a href="painting.html">点击查看更多</p></a>
-		  </div>
-        </div>
-      </div>
-      <hr>
-<hr>
-<hr>
-      <h2>2018-2020部分拍摄作品</h2>
-      <hr>
-      <div class="container">
-        <div class="row text-center">
-			<div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/相机/01.png" alt=""><p>2019.12.12 拍摄</p></div>
-			<div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/相机/02.png" alt=""><p>2019.12.12 拍摄</p></div>
-			<div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/相机/03.png" alt=""><p>2019.12.12 拍摄</p></div>
-		  <div class="col-12">
-			<p class="text-align:center"><a href="Photography.html">点击查看更多</p></a>
-		  </div>
-			</div>
-      </div>
-      <hr>
 <hr>
 <hr>
       <h2>投食专区</h2>
@@ -164,13 +87,6 @@ var _hmt = _hmt || [];
 			<div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/支付码/支付宝.png" alt=""><p>使用支付宝投食</p></div>
 			<div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/支付码/QQ.png" alt=""><p>使用QQ投食</p></div>
 			<div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/支付码/微信.png" alt=""><p>使用微信投食</p></div>
-			</div>
-      </div>
-      <hr>
-<hr>
-	<div class="col-12">
-			<p class=""><a href="Update log.html">网站更新日志</p></a>
-		  </div>
       <div class="container"> </div>
       <hr>
       <footer class="text-center">
