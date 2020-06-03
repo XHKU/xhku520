@@ -1,5 +1,7 @@
 <html>
     <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	<meta http-equiv="refresh" content="10">
+    <meta http-equiv="refresh" content="0;url=Web-1.html">
   </head>
   <body>
       <div class="row">
