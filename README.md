@@ -4,10 +4,6 @@
     <meta http-equiv="refresh" content="0;url=https://www.xhku.xyz/Web-1.html">
   </head>
   <body>
-      <div class="row">
-		  <a href="https://www.xhku.xyz/Web-1">
-          <img border="0" src="XHKU-logo.png" alt="" width="300" height="35"/> ---点击访问主网站</a>
-      </div>
       <hr>
       <div class="row">
         <div class="col-md-12 col-sm-12">
