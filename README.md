@@ -26,18 +26,9 @@
       </div>
 <hr>
 <hr>
-      <h2>投食专区</h2>
-      <hr>
-      <div class="container">
-        <div class="row text-center">
-			<div class="col-sm-2 col-12 p-0"><img class="img-thumbnail"  src="图片/支付码/支付宝.png" alt=""><p>使用支付宝投食</p></div>
-			<div class="col-sm-2 col-12 p-0"><img class="img-thumbnail"  src="图片/支付码/QQ.png" alt=""><p>使用QQ投食</p></div>
-			<div class="col-sm-2 col-12 p-0"><img class="img-thumbnail"  src="图片/支付码/微信.png" alt=""><p>使用微信投食</p></div>
-      <div class="container"> </div>
-      <hr>
       <footer class="text-center">
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <p class="text-align:center"><p>微设工作室 © 版权所有   -XHKU</p>
+              <p class="text-align:center"><p>XHKU</p>
 </html>
