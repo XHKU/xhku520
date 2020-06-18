@@ -5,6 +5,11 @@
 	    <link rel="Bookmark" type="image/x-icon" href="图片/XHKU.ico" />
         <link rel="icon" type="image/x-icon" href="图片/XHKU.ico" />
         <link rel="shortcut icon" type="image/x-icon" href="图片/XHKU.ico" />
+	  <!-- 图片旋转层叠切换 -->
+	  <link rel="stylesheet" href="css/style.css" type="text/css" />
+	  <link rel="stylesheet" href="css/imageflow.packed.css" type="text/css" />
+	  <script type="text/javascript" src="js/imageflow.js"></script>
+	    
 	  
 	  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -26,6 +31,7 @@ var _hmt = _hmt || [];
 })();
 </script>
   </head>
+	 <!-- 广告 -->
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="Web-1.html">XHKU</a>
@@ -129,13 +135,15 @@ var _hmt = _hmt || [];
 <hr>
 <hr>
       <h2>2020-2020所有绘画作品</h2>
-      <hr>
-      <div class="container">
-        <div class="row text-center">
-		  <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/成稿/10007.jpg" alt=""><p>2020.2.17绘画</p></div>
-          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/成稿/3-成稿.jpg" alt=""><p>2020.3.21绘画</p></div>
-		  
-          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="图片/成稿/5-成稿.jpg" alt=""><p>2020.5.4绘画</p></div>
+		
+		<div id="myImageFlow" class="imageflow">
+			<img src="图片/成稿/10007.jpg" longdesc="图片/成稿/10007.jpg" width="300" height="400" alt="2020年6月15日绘画" />
+			<img src="图片/成稿/10008.jpg" longdesc="图片/成稿/10008.jpg" width="300" height="400" alt="2020年6月18日绘画" />
+			<img src="图片/成稿/5-成稿.jpg" longdesc="图片/成稿/5-成稿.jpg" width="300" height="400" alt="2020年5月4日绘画" />
+			<img src="图片/成稿/3-成稿.jpg" longdesc="图片/成稿/3-成稿.jpg" width="300" height="400" alt="2020年3月21日绘画" />
+			<img src="图片/成稿/10000.jpg" longdesc="图片/成稿/10000.jpg" width="300" height="400" alt="2020年2月17日绘画" />
+		</div>
+
 		  <div class="col-12">
 		    <p class="text-align:center"><a href="painting.html">点击查看更多</p></a>
 		  </div>
