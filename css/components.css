@@ -1,0 +1,152 @@
+/*=====================
+=======  文字  ========
+=====================*/
+.title-box-contact {
+  font-size: 20px;
+  font-weight: bold;
+
+  position: relative;
+
+  display: block;
+
+  margin-bottom: 25px;
+  padding-top: 70px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #555555;
+}
+/*=====================
+=====  文字-结束  ======
+=====================*/
+
+/*=====================
+========  竖线  ========
+=====================*/
+.title-box-contact:after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 1px;
+  height: 50px;
+  margin-left: -1px;
+
+  content: '';
+
+  background-color: #000000;
+}
+/*=====================
+=====  竖线-结束  ======
+=====================*/
+
+/*=====================
+========  方向  ========
+=====================*/
+.box-contact {
+  position: relative;
+
+  display: table;
+
+  width: 100%;
+  height: 225px;
+  padding: 30px;
+
+  text-align: center;
+
+  border: 1px solid #e8e8e8;
+}
+/*=====================
+=====  方向-结束  ======
+=====================*/
+
+/*=====================
+========  遮罩  ========
+=====================*/
+.box-contact:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  content: '';
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+
+  opacity:0.8;
+  background-color: #0FCDD4;
+}
+
+.box-contact:hover:after {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/*=====================
+=====  遮罩-结束  ======
+=====================*/
+
+
+
+
+
+
+
+
+
+/*=====================
+======  字体浮动  ======
+=====================*/
+.box-contact:hover .description {
+  top: -30px;
+
+  color: #ffffff;
+}
+
+.contact-form {
+  text-align: center;
+}
+
+.box-contact .description {
+  position: relative;
+  z-index: 10;
+  top: 0;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  color: #878795;
+}
+/*=====================
+====  字体浮动-结束  ====
+=====================*/
+
+/*=====================
+======  图片大小  ======
+=====================*/
+.contact-ewm-con {
+  width: 140px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.contact-ewm-con img {
+  width: 100%;
+  margin: 0 auto;
+}
+/*=====================
+====  图片大小-结束  ====
+=====================*/
