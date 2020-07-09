@@ -1,0 +1,606 @@
+﻿<!DOCTYPE >
+<html xmlns="https://www.xhku.xyz/Web-1">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>弹性盒子模型布局的浏览器界面仿真</title>
+<style>
+/**
+ * Core: Reset
+ * --------------------------------------------------
+ */
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+figure,
+table,
+th,
+td,
+caption,
+hr {
+    margin: 0;
+    padding: 0;
+    /**
+ * Core: Base
+ * --------------------------------------------------
+ */
+}
+body {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 2vw;
+    position: relative;
+    background: #f5f7fa url("images/blured-bg.jpg?v=3") no-repeat center center;
+    background-size: cover;
+    font-size: 14px;
+    line-height: 20px;
+    color: #434a54;
+    text-rendering: optimizeSpeed;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms;
+    /**
+ * Component: `browser`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-browser {
+    position: relative;
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    /**
+ * Component: `bar`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-bar {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 35px;
+    padding: 0 5px;
+}
+.c-bar--top {
+    background-color: #4a4653;
+    z-index: 1;
+}
+.c-bar--bottom {
+    background-color: #f5f7fa;
+    border-bottom: 1px solid #e6e9ed;
+    z-index: 2;
+    /**
+ * Component: `controls`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-controls {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /**
+ * Component: `control`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-control {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font: 0/0 '';
+    color: transparent;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.c-control--close {
+    border-color: #da4453;
+    background-color: #ed5565;
+}
+.c-control--close:hover {
+    background-color: #da4453;
+}
+.c-control--min {
+    border-color: #f6bb42;
+    background-color: #ffce54;
+}
+.c-control--min:hover {
+    background-color: #f6bb42;
+}
+.c-control--max {
+    border-color: #8cc152;
+    background-color: #a0d468;
+}
+.c-control--max:hover {
+    background-color: #8cc152;
+    /**
+ * Component: `tabs`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-tabs {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin: 0 5px;
+    padding: 0;
+    list-style: none;
+    /**
+ * Component: `tab`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-tab {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #ccd1d9;
+    height: 25px;
+    padding: 0 5px;
+    border-radius: 3px 3px 0 0;
+    color: #434a54;
+    max-width: 10vw;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.c-tab:not(:last-child) {
+    margin-right: 5px;
+}
+.c-tab:hover:not(.is-active) {
+    background-color: #e6e9ed;
+}
+.c-tab.is-active {
+    background-color: #f5f7fa;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.c-tab__favicon {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+.c-tab__title {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-size: 12px;
+    padding-right: 10px;
+    /**
+ * Component: `mode`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-mode {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    color: #aab2bd;
+    border: 1px solid #aab2bd;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.c-mode:hover {
+    color: #ccd1d9;
+    border-color: #ccd1d9;
+}
+.c-mode .fa {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    /**
+ * Component: `menu`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-menu {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    color: #656d78;
+    border: 1px solid transparent;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.c-menu:hover {
+    background-color: #fff;
+    border-color: #ccd1d9;
+}
+.c-menu .fa {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    /**
+ * Component: `navigation`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-navigation {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    color: #656d78;
+    border: 1px solid transparent;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.c-navigation:hover {
+    background-color: #fff;
+    border-color: #ccd1d9;
+}
+.c-navigation .fa {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    /**
+ * Component: `address`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-address {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 0 5px;
+    border: 1px solid #ccd1d9;
+}
+.c-address__connection {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: #a0d468;
+}
+.c-address__url {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    color: #656d78;
+}
+.c-address__bookmark {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: #656d78;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.c-address__bookmark:hover {
+    color: #f6bb42;
+    /**
+ * Component: `frames`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-frames {
+    position: relative;
+    height: 80vh;
+    background-color: #fff;
+    /**
+ * Component: `frame`
+ * -----------------------------------------------------------------------------
+ */
+}
+.c-frame {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 0;
+}
+.c-frame--default {
+    background: transparent url("images/welcome.jpg?v=3") no-repeat center center;
+    background-size: cover;
+}
+.c-frame--default:before {
+    content: "Welcome!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 100;
+}
+.c-frame.is-active {
+    display: block;
+}
+</style>
+</head>
+<body>
+<link rel='stylesheet prefetch' href='css/font-awesome.css'>
+<section class="c-browser">
+    <div class="c-bar c-bar--top">
+        <ul class="c-controls">
+            <li class="c-control c-control--close">Close Window</li>
+            <li class="c-control c-control--min">Miniturize Window</li>
+            <li class="c-control c-control--max">Maximize Window</li>
+        </ul>
+        <ul class="c-tabs">
+            <li data-frame="0" class="c-tab is-active js-tab">
+                <div class="c-tab__favicon"><i class="fa fa-home"></i>
+                </div>
+                <div class="c-tab__title">Hello!</div>
+            </li>
+			<li data-frame="1" class="c-tab js-tab">
+                <div class="c-tab__favicon"><i class="fa fa-paper-plane"></i>
+                </div>
+                <div class="c-tab__title">XHKU</div>
+            </li>
+            <li data-frame="2" class="c-tab js-tab">
+                <div class="c-tab__favicon"><i class="fa fa-bars"></i>
+                </div>
+                <div class="c-tab__title">百度</div>
+            </li>
+            <li data-frame="3" class="c-tab js-tab">
+                <div class="c-tab__favicon"><i class="fa fa-bars"></i>
+                </div>
+                <div class="c-tab__title">小福(狐)利(狸)</div>
+            </li>
+            <li data-frame="4" class="c-tab js-tab">
+                <div class="c-tab__favicon"><i class="fa fa-bars"></i>
+                </div>
+                <div class="c-tab__title">Cat</div>
+            </li>
+            
+        </ul>
+        <div class="c-mode"><i class="fa fa-fw fa-user-secret"></i>
+        </div>
+    </div>
+    <div class="c-bar c-bar--bottom">
+        <div class="c-navigation"><i class="fa fa-fw fa-chevron-left"></i>
+        </div>
+        <div class="c-navigation"><i class="fa fa-fw fa-chevron-right"></i>
+        </div>
+        <div class="c-navigation"><i class="fa fa-fw fa-refresh"></i>
+        </div>
+        <div class="c-address">
+            <div class="c-address__connection"><i class="fa fa-fw fa-lock"></i>
+            </div>
+            <input type="text" name="url" id="url" value="xhku.xyz" class="c-address__url js-url" />
+            <div class="c-address__bookmark"><i class="fa fa-fw fa-star-o"></i>
+            </div>
+        </div>
+        <div class="c-menu"><i class="fa fa-fw fa-bars"></i>
+        </div>
+    </div>
+    <div class="c-frames">
+        <div data-src="https://www.xhku.xyz/Web-1" data-frame="0" class="c-frame c-frame--default js-frame is-active"></div>
+		<iframe data-src="https://www.xhku.xyz/Web-1" data-frame="1" class="c-frame js-frame lazyload"></iframe>
+        <iframe data-src="https://www.baidu.com/" data-frame="2" class="c-frame js-frame lazyload"></iframe>
+        <iframe data-src="12797.html" data-frame="3" class="c-frame js-frame lazyload"></iframe>
+        <iframe data-src="cat.html" data-frame="4" class="c-frame js-frame lazyload"></iframe>
+    </div>
+</section>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src='js/lazysizes.min.js'></script>
+<script>
+;
+(function() {
+
+    'use strict';
+
+    var $url = $('.js-url');
+    var $tab = $('.js-tab');
+    var $frame = $('.js-frame');
+
+    $url.on('click', function() {
+        $(this).select();
+    });
+
+    $url.on('keydown', function(event) {
+
+        if (event.keyCode !== 13) return;
+
+        var $currentTab = $tab.filter(function() {
+            return $(this).hasClass('is-active');
+        });
+
+        var $currentFrame = $frame.filter(function() {
+            return $(this).hasClass('is-active');
+        });
+
+        var id = $currentFrame.data('frame');
+
+        if (id === 0) {
+            $currentFrame.replaceWith('<iframe class="c-frame js-frame is-active" data-frame="0" src="https://www.xhku.xyz/Web-1"></iframe>');
+        } else {
+            $currentFrame.attr('src', 'https://www.xhku.xyz/Web-1');
+        }
+
+        $url.val('https://www.xhku.xyz/Web-1');
+
+        $currentTab.find('.c-tab__title').text('Rick Astley - Never Gonna Give You Up');
+        $currentTab.find('.c-tab__favicon .fa').removeClass('fa-codepen').addClass('fa-youtube-play');
+    });
+
+    $(document).on('click', '.js-tab', function() {
+
+        var id = $(this).data('frame');
+
+        var $currentTab = $tab.filter(function() {
+            return $(this).data('frame') === id;
+        });
+
+        var $currentFrame = $frame.filter(function() {
+            return $(this).data('frame') === id;
+        });
+
+        var url = $currentFrame.attr('data-src');
+
+        $url.val(url);
+
+        $tab.removeClass('is-active');
+        $frame.removeClass('is-active');
+
+        $currentTab.addClass('is-active');
+        $currentFrame.addClass('is-active');
+    });
+
+})();
+</script>
+</body>
+</html>
