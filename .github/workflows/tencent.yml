@@ -23,7 +23,7 @@ on:
 env:
   TKE_IMAGE_URL: ccr.ccs.tencentyun.com/demo/mywebapp
   TKE_REGION: ap-guangzhou
-  TKE_CLUSTER_ID: cls-mywebapp
+  TKE_CLUSTER_ID:	100014209706
   DEPLOYMENT_NAME: tke-test
 
 jobs:
