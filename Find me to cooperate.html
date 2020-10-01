@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+<head>
+<!-- 标签图标 -->
+<link rel="Bookmark" type="image/x-icon" href="images\00001.ico" />
+<link rel="icon" type="image/x-icon" href="images\00001.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="images\00001.ico" />
+<!-- 返回顶部-css -->
+<link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="css/componentsTop.css?1046012657">
+<!-- 返回顶部-css结束 -->
+<!-- 淡出-css -->
+<link type="text/css" rel="stylesheet" href="css/animate.css">
+<!-- 返回顶部-css结束 -->
+<meta charset="utf-8">
+<title>XHKU-找我合作</title>
+	<link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Find me to cooperate/layui/css/layui.css" />
+	
+</head>
+	
+
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">XHKU</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">主页 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Web-2.html">关于我</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            导航
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="painting.html">我的绘画作品</a>
+				<a class="dropdown-item" href="Photography.html">我的摄影作品</a>
+				<a class="dropdown-item" href="Update log.html">更新日志</a>
+				<a class="dropdown-item" href="evaluation.html">关注我</a>
+				<a class="dropdown-item" href="In site navigation.html">站内导航</a>
+				<a class="dropdown-item" href="Find me to cooperate.html">找我合作</a>
+            </div>
+          </li>
+          <li class="nav-item">
+			  <a target="_blank" class="nav-link" href="https://support.qq.com/products/157274/">评论区</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+	<section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>找我合作</h1>
+            <h6></h6>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+
+
+ <form></form>
+
+<table class="table">
+		<thead>
+		<tr>
+			<th>视频剪辑</th>
+			<th>预计金额5~100元</th>
+			<th>项目包含:视频剪辑</th>
+			<th><button id="视频剪辑"  class="layui-btn layui-btn-primary">说明</button></th>
+		</tr>
+		</thead>
+		<thead>
+		<tr>
+			<th>图片美化</th>
+			<th>预计金额3~100元</th>
+			<th>项目包含:修图</th> 
+			<th><button id="图片美化"  class="layui-btn layui-btn-primary">说明</button></th>
+		</tr>
+		</thead>
+	    <thead>
+		<tr>
+			<th>绘画</th>
+			<th>预计金额3~100元</th>
+			<th>项目包含:手绘、电子绘画</th>
+			<th><button id="绘画"  class="layui-btn layui-btn-primary">说明</button></th>
+		</tr>
+		</thead>
+	    <thead>
+		<tr>
+			<th>打印</th>
+			<th>黑白:一面0.5元 / 彩色:一面1元</th>
+			<th>项目包含:彩色打印、黑白打印、复印</th>
+			<th><button id="打印"  class="layui-btn layui-btn-primary">说明</button></th>
+		</tr>
+		</thead>
+	    <thead>
+		<tr>
+			<th>建模</th>
+			<th>预计金额20~500元</th>
+			<th>项目包含:3D建模</th>
+			<th><button id="建模"  class="layui-btn layui-btn-primary">说明</button></th>
+		</tr>
+		</thead>
+	    <thead>
+		<tr>
+			<th>拍照</th>
+			<th>预计金额2~300元</th>
+			<th>项目包含:摄影、航拍</th>
+			<th><button id="拍照"  class="layui-btn layui-btn-primary">说明</button></th>
+		</tr>
+		</thead>
+	    <thead>
+		<tr>
+			<th>网站搭建</th>
+			<th>预计金额10~1000元</th>
+			<th>项目包含:网站搭建、服务器租聘、域名注册</th>
+			<th><button id="网站搭建"  class="layui-btn layui-btn-primary">说明</button></th>
+		</tr>
+		</thead>
+	
+	
+	<script src="Find me to cooperate/layui/layui.js"></script>
+<script>
+layui.config({
+  version: '1568076536616' //为了更新 js 缓存，可忽略
+});
+//视频剪辑
+layui.use(['layer'], function(){
+  var layer = layui.layer; //弹层
+  var $ = layui.$;
+  $("#视频剪辑").on("click",function(){
+    layer.open({
+        type: 2
+        , title: '视频剪辑'
+        , area: ['600px', '400px']
+        , content: 'Find me to cooperate/视频剪辑.html'
+        , btn: ['', '关闭'] 
+        , yes: function (index, layero) {
+            var iframeWindow = window['layui-layer-iframe' + index];
+            obj = iframeWindow.document.getElementById("saveArtPontItemSetView");
+            //保存按钮单击事件
+            iframeWindow.layui.form.on('submit(save)', function (data) {
+                console.log(data);
+                return false;
+            });
+            obj.click();
+
+        }
+        , cancel : function () {
+           
+        }
+        , btn2: function () {
+            layer.closeAll();
+        }
+
+
+
+    });
+  });
+  
+
+});
+//图片美化
+layui.use(['layer'], function(){
+  var layer = layui.layer; //弹层
+  var $ = layui.$;
+  $("#图片美化").on("click",function(){
+    layer.open({
+        type: 2
+        , title: '图片美化'
+        , area: ['600px', '400px']
+        , content: 'Find me to cooperate/图片美化.html'
+        , btn: ['', '关闭'] 
+        , yes: function (index, layero) {
+            var iframeWindow = window['layui-layer-iframe' + index];
+            obj = iframeWindow.document.getElementById("saveArtPontItemSetView");
+            //保存按钮单击事件
+            iframeWindow.layui.form.on('submit(save)', function (data) {
+                console.log(data);
+                return false;
+            });
+            obj.click();
+
+        }
+        , cancel : function () {
+           
+        }
+        , btn2: function () {
+            layer.closeAll();
+        }
+
+
+
+    });
+  });
+  
+
+});
+//绘画
+layui.use(['layer'], function(){
+  var layer = layui.layer; //弹层
+  var $ = layui.$;
+  $("#绘画").on("click",function(){
+    layer.open({
+        type: 2
+        , title: '绘画'
+        , area: ['600px', '400px']
+        , content: 'Find me to cooperate/绘画.html'
+        , btn: ['', '关闭'] 
+        , yes: function (index, layero) {
+            var iframeWindow = window['layui-layer-iframe' + index];
+            obj = iframeWindow.document.getElementById("saveArtPontItemSetView");
+            //保存按钮单击事件
+            iframeWindow.layui.form.on('submit(save)', function (data) {
+                console.log(data);
+                return false;
+            });
+            obj.click();
+
+        }
+        , cancel : function () {
+           
+        }
+        , btn2: function () {
+            layer.closeAll();
+        }
+
+
+
+    });
+  });
+  
+
+});
+//打印
+layui.use(['layer'], function(){
+  var layer = layui.layer; //弹层
+  var $ = layui.$;
+  $("#打印").on("click",function(){
+    layer.open({
+        type: 2
+        , title: '打印'
+        , area: ['600px', '400px']
+        , content: 'Find me to cooperate/打印.html'
+        , btn: ['', '关闭'] 
+        , yes: function (index, layero) {
+            var iframeWindow = window['layui-layer-iframe' + index];
+            obj = iframeWindow.document.getElementById("saveArtPontItemSetView");
+            //保存按钮单击事件
+            iframeWindow.layui.form.on('submit(save)', function (data) {
+                console.log(data);
+                return false;
+            });
+            obj.click();
+
+        }
+        , cancel : function () {
+           
+        }
+        , btn2: function () {
+            layer.closeAll();
+        }
+
+
+
+    });
+  });
+  
+
+});
+//建模
+layui.use(['layer'], function(){
+  var layer = layui.layer; //弹层
+  var $ = layui.$;
+  $("#建模").on("click",function(){
+    layer.open({
+        type: 2
+        , title: '建模'
+        , area: ['600px', '400px']
+        , content: 'Find me to cooperate/建模.html'
+        , btn: ['', '关闭'] 
+        , yes: function (index, layero) {
+            var iframeWindow = window['layui-layer-iframe' + index];
+            obj = iframeWindow.document.getElementById("saveArtPontItemSetView");
+            //保存按钮单击事件
+            iframeWindow.layui.form.on('submit(save)', function (data) {
+                console.log(data);
+                return false;
+            });
+            obj.click();
+
+        }
+        , cancel : function () {
+           
+        }
+        , btn2: function () {
+            layer.closeAll();
+        }
+
+
+
+    });
+  });
+  
+
+});
+//拍照
+layui.use(['layer'], function(){
+  var layer = layui.layer; //弹层
+  var $ = layui.$;
+  $("#拍照").on("click",function(){
+    layer.open({
+        type: 2
+        , title: '拍照'
+        , area: ['600px', '400px']
+        , content: 'Find me to cooperate/拍照.html'
+        , btn: ['', '关闭'] 
+        , yes: function (index, layero) {
+            var iframeWindow = window['layui-layer-iframe' + index];
+            obj = iframeWindow.document.getElementById("saveArtPontItemSetView");
+            //保存按钮单击事件
+            iframeWindow.layui.form.on('submit(save)', function (data) {
+                console.log(data);
+                return false;
+            });
+            obj.click();
+
+        }
+        , cancel : function () {
+           
+        }
+        , btn2: function () {
+            layer.closeAll();
+        }
+
+
+
+    });
+  });
+  
+
+});
+//网站搭建
+layui.use(['layer'], function(){
+  var layer = layui.layer; //弹层
+  var $ = layui.$;
+  $("#网站搭建").on("click",function(){
+    layer.open({
+        type: 2
+        , title: '网站搭建'
+        , area: ['600px', '400px']
+        , content: 'Find me to cooperate/网站搭建.html'
+        , btn: ['', '关闭'] 
+        , yes: function (index, layero) {
+            var iframeWindow = window['layui-layer-iframe' + index];
+            obj = iframeWindow.document.getElementById("saveArtPontItemSetView");
+            //保存按钮单击事件
+            iframeWindow.layui.form.on('submit(save)', function (data) {
+                console.log(data);
+                return false;
+            });
+            obj.click();
+
+        }
+        , cancel : function () {
+           
+        }
+        , btn2: function () {
+            layer.closeAll();
+        }
+
+
+
+    });
+  });
+  
+
+});
+</script>
+
+	
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.0.0.js"></script>
+
+<script  src="apk/script.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/enquire.min.js"></script>
+<script src="js/jquery.directional-hover.min.js"></script>
+<!-- 回顶部 -->
+<div id="back-top"><a href="#top" class="link show-btn"><em class="fa fa-angle-double-up"></em></a></div>
+<!-- 回顶部结束 -->
+</body>
+</html>

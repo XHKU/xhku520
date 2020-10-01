@@ -53,14 +53,14 @@ input.t {
 [v-cloak] {
     display: none;
 }
-
+/*搜索框高度*/
 #bigBox {
 	width: 1000px;
 	height: 485px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-top: -242px;
+	margin-top: -135px;
 	margin-left: -500px
 }
 #logoBox {

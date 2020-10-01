@@ -1,0 +1,6 @@
+e:
+cd github
+cd xhku520
+
+git add .
+git commit -m "XHKU"
